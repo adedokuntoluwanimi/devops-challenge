@@ -1,5 +1,5 @@
 # Using golang:<version> alpine as base image 
-FROM golang:1.24.3-alpine
+FROM golang:1.22.5-alpine
 # Setting the work directory
 WORKDIR /birdapp
 # Copying available packages

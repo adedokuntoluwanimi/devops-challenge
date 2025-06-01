@@ -1,0 +1,22 @@
+services:
+  bird:
+    build:
+      context: ./bird
+      dockerfile: Dockerfile
+    ports:
+      - "4201:4201"
+    networks:
+      - birdnet
+
+  birdImage:
+    build:
+      context: ./birdImage
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    networks:
+      - birdnet
+
+networks:
+  birdnet:
+    driver: bridge
