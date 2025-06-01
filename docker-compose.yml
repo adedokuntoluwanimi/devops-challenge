@@ -3,6 +3,7 @@ services:
     build:
       context: ./bird
       dockerfile: Dockerfile
+    image: bird-api
     ports:
       - "4201:4201"
     networks:
@@ -12,6 +13,7 @@ services:
     build:
       context: ./birdImage
       dockerfile: Dockerfile
+    image: bird-api
     ports:
       - "4200:4200"
     networks:
