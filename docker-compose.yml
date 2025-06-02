@@ -7,7 +7,7 @@ services:
     ports:
       - "4201:4201"
     volumes:
-      - bird-data:/app/data
+      - /workspace/devops-challenge/bird/data:/app/data
     networks:
       - birdnet
 
@@ -19,7 +19,7 @@ services:
     ports:
       - "4200:4200"
     volumes:
-      - birdimage-data:/app/data
+      - /workspace/devops-challenge/bird/data:/app/data
     networks:
       - birdnet
 
@@ -27,6 +27,4 @@ networks:
   birdnet:
     driver: bridge
 
-volumes:
-  bird-data:
-  birdimage-data:
+
