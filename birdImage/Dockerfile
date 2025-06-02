@@ -1,7 +1,7 @@
 # Using golang:<version> alpine as base image 
 FROM golang:1.22.5-alpine
 # Setting the work directory
-WORKDIR /birdapp
+WORKDIR /birdImage
 # Copying available packages
 COPY  go.mod ./
 # Installing app dependencies

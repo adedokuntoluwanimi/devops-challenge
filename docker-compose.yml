@@ -6,6 +6,8 @@ services:
     image: bird-api
     ports:
       - "4201:4201"
+    volumes:
+      - bird-data:/app/data
     networks:
       - birdnet
 
@@ -13,12 +15,18 @@ services:
     build:
       context: ./birdImage
       dockerfile: Dockerfile
-    image: bird-api
+    image: bird-api-1
     ports:
       - "4200:4200"
+    volumes:
+      - birdimage-data:/app/data
     networks:
       - birdnet
 
 networks:
   birdnet:
     driver: bridge
+
+volumes:
+  bird-data:
+  birdimage-data:
